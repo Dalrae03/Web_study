@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <!--axios가 구성되어있는 외부 자바스크립트 라이브러리 불러오기-->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <!--자바스크립트 객체데이터랑 비슷한 데이터 링크 axios.get에 입력-->
+        <script>
+            axios.get("https://jsonplaceholder.typicode.com/todos/1")
+                .then(function(result) {
+                    console.log("status code: ", result.status);
+                    console.log("data: ", result.data);
+                })
+                .catch(function(error){
+                    console.log("에러 발생: ", error);
+                })
+            console.log("바로 실행")
+        </script>
+    </head>
+
+    <body></body>
+</html>
