@@ -170,3 +170,62 @@ language === 'javascript' ? console.log('재밌다') : console.log('어렵다')
 const isJavascript = language === 'javascript'? true : false 
 //result에 true가 들어옴.
 ```
+
+<br>
+<br>
+
+- **export, import**
+
+자바스크립트 파일 (라이브러리) 불러오기
+
+html - `<script>`태그를 활용 
+
+ES6 - `import` 를 사용
+
+```js
+// 기존 방식
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+//hello.js를 불러오기
+<script src="./hello.js"></script>
+
+
+// import 방식
+import axios from 'axios'; //다운받은 axios 라이브러리를 불러오기
+import App from './App.js' //hello.js 파일을 불러오기
+import Potato from "./main" //import를 할때 모듈명은 자유롭게 설정이 가능
+
+// App.js 파일
+function App(){
+	return <h1>hello</h1>
+}
+
+// App 함수를 외부에서 사용할 수 있도록 export 하는 것
+// 기본적으로 import하기위해 export가 있어야한다.
+export default App;
+```
+
+<br>
+
+- 여러 객체 export & import 하기
+
+위 코드에서 export 옆에 붙은 `default` 는 한가지 객체만 import하겠다는 것을 의미
+
+하나의 파일에 여러개의 객체를 export할 수도 있음.
+```js
+function funcA(){
+	//...
+}
+function funcB(){
+	//...
+}
+const varC = 'hello';
+export {
+		a : funcA,
+	b : funcB,
+	c : varC
+}
+
+// import 할 때 {}사용
+import {a, b, c} from './App.js'
+```
