@@ -33,7 +33,7 @@ function MainPage(){
                         products.map(function(product, index){ //js문법 map사용
                             return(
                                 <div className='product-card'>
-                                    <Link className='product-link' to={"/product/"+index}>
+                                    <Link className='product-link' to={`/products/${index}`}> // "/products/"+index
                                         <div>
                                             <img className='product-img' src={product.imageUrl} />
                                         </div>
@@ -62,3 +62,5 @@ function MainPage(){
 }
 
 export default MainPage
+
+// `/products/${index}`} (ES6 ternary return)= "/products/"+index
