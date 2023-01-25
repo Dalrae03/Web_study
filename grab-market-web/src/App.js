@@ -5,9 +5,10 @@ import ProductPage from './product';
 import UploadPage from './upload';
 
 function App() {
-  return <div>
+  return (
+  <div>
     <Switch>
-      <Route exact ={true} path={"/"}>
+      <Route exact ={true} path="/">
         <MainPageComponent />
       </Route>
       <Route exact ={true} path="/product/:id"> 
@@ -17,7 +18,8 @@ function App() {
         <UploadPage />
       </Route>
     </Switch>
-    </div>
+  </div>
+  )
 }
 
 export default App;
