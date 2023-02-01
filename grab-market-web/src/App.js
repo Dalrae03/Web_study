@@ -6,9 +6,15 @@ import UploadPage from './upload';
 
 function App() {
   return (
-  <div>
+    <div>
+      <div id="header">
+          <div id="header-area">
+            <img src="/images/icons/logo.png"/>
+              </div>
+      </div>
+      <div id="body">
     <Switch>
-      <Route exact ={true} path="/">
+      <Route exact ={true} path={"/"}>
         <MainPageComponent />
       </Route>
       <Route exact ={true} path="/product/:id"> 
@@ -18,8 +24,9 @@ function App() {
         <UploadPage />
       </Route>
     </Switch>
-  </div>
-  )
-}
+      </div>
+      <div id="footer"></div>
+    </div>
+)}
 
 export default App;
