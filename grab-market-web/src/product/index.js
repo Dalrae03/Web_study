@@ -1,19 +1,18 @@
-import { useParams } from "react-router-dom/cjs/react-router-dom.min";
+import {useParams} from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-function ProductPage(){
+function ProductPage() {
     const {id} = useParams();
     const [product, setProduct] = useState(null);
-    useEffect(function() {
-        axios.get(`https://cb42e1a2-1c38-4a71-a5da-aa11e68047d4.mock.pstmn.io/products/${id}`)
-        .then(function(result){
-            setProduct(result.data);
-            console.log(result);
-        }).catch(function(error){
-            console.error(error);
-        });
-    }, []);
+    useEffect(function(){
+    axios.get(`https://cb42e1a2-1c38-4a71-a5da-aa11e68047d4.mock.pstmn.io/products/${id}`)
+    .then(function(result){
+        setProduct(result.data);
+    }).catch(function(error){
+        console.error(error);
+    });
+    },[]);
 
     if(product === null){
         return <h1>상품 정보를 받고 있습니다...</h1>
@@ -21,7 +20,7 @@ function ProductPage(){
 
     return (
         <div>
-            <div id = "image-box">
+            <div id="image-box">
                 <img src={"/"+product.imageUrl} />
             </div>
             <div id="profile-box">
@@ -34,7 +33,7 @@ function ProductPage(){
                 <div id="description">{product.description}</div>
             </div>
         </div>
-    );
+    )
 }
 
 export default ProductPage;

@@ -17,15 +17,15 @@ function App() {
       <Route exact ={true} path={"/"}>
         <MainPageComponent />
       </Route>
-      <Route exact ={true} path="/product/:id"> 
+      <Route exact ={true} path="/products/:id"> 
         <ProductPage />
       </Route>
       <Route exact ={true} path="/upload">
         <UploadPage />
       </Route>
     </Switch>
-      </div>
-      <div id="footer"></div>
+    </div>
+    <div id="footer"></div>
     </div>
 )}
 
