@@ -1,22 +1,5 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-
 #banner {
     height: 300px;
-}
-
-#header-area {
-    height: 100%;
-    width: 1024px;
-    display: flex;
-    align-items: center;
-}
-
-#header-area > img {
-    width: 128px;
-    height: 36px;
 }
 
 #banner > img {
