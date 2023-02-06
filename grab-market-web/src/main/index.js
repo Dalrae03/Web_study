@@ -23,29 +23,28 @@ function MainPage(){
                 </div>
                 <h1>판매되는 상품들</h1>
                 <div id="product-list">
-                    {
-                        products.map(function(product, index){ //js문법 map사용
-                            return(
-                                <div className="product-card">
-                                    <Link className="product-link" to={`/products/${product.id}`}> 
-                                        <div>
-                                            <img className="product-img" src={product.imageUrl} />
+                    {products.map(function(product, index){ //js문법 map사용
+                        return(
+                            <div className="product-card">
+                                <Link className="product-link" to={`/products/${product.id}`}> 
+                                    <div>
+                                        <img className="product-img" src={product.imageUrl} />
+                                    </div>
+                                    <div className="product-contents">
+                                        <span className="product-name">
+                                            {product.name}
+                                        </span>
+                                        <span className="product-price">
+                                            {product.price}원
+                                        </span>
+                                        <div className="product-seller">
+                                            <img className="product-avatar" src='images/icons/avatar.png' />
+                                            <span>{product.seller}</span>
                                         </div>
-                                        <div className="product-contents">
-                                            <span className="product-name">
-                                                {product.name}
-                                            </span>
-                                            <span className="product-price">
-                                                {product.price}원
-                                            </span>
-                                            <div className="product-seller">
-                                                <img className="product-avatar" src='images/icons/avatar.png' />
-                                                <span>{product.seller}</span>
-                                            </div>
-                                        </div>
-                                    </Link>
-                                </div>
-                            );
+                                    </div>
+                                </Link>
+                            </div>
+                        );
                         })
                     }
                 </div>
