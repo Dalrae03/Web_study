@@ -1,5 +1,5 @@
 var http = require('http');
-var hostname = '127.0.0.1';
+var hostname = '127.0.0.1'; //localhost와 동일
 var port = 8080;
 
 const server = http.createServer(function(req, res) {
