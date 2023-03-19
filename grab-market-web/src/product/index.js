@@ -23,7 +23,7 @@ function ProductPage() {
     return (
         <div>
             <div id="image-box">
-                <img src={"/"+product.imageUrl} />
+                <img src={`${API_URL}/${product.imageUrl}`} />
             </div>
             <div id="profile-box">
                 <img src="/images/icons/avatar.png" />
