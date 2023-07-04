@@ -207,7 +207,7 @@ export default App;
 
 <br>
 
-- 여러 객체 export & import 하기
+- **여러 객체 export & import 하기**
 
 위 코드에서 export 옆에 붙은 `default` 는 한가지 객체만 import하겠다는 것을 의미
 
